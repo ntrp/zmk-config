@@ -1,0 +1,6 @@
+.DS_Store
+zmk
+zephyr
+modules
+build
+.west
