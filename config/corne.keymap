@@ -14,10 +14,10 @@
 
         layer_0 {
             bindings = <
-&trans  &kp Q  &kp W  &kp F   &kp P   &kp B        &kp J      &kp L   &kp U      &kp Y    &kp SEMI  &trans
-&trans  &kp A  &kp R  &kp S   &kp T   &kp G        &kp M      &kp N   &kp E      &kp I    &kp O     &trans
-&trans  &kp Z  &kp X  &kp C   &kp D   &kp V        &kp K      &kp H   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                      &trans  &trans  &kp SPACE    &kp ENTER  &trans  &trans
+&trans  &kp Q  &kp W  &kp F         &kp P  &kp B        &kp J      &kp L  &kp U         &kp Y    &kp SEMI  &trans
+&trans  &kp A  &kp R  &kp S         &kp T  &kp G        &kp M      &kp N  &kp E         &kp I    &kp O     &trans
+&trans  &kp Z  &kp X  &kp C         &kp D  &kp V        &kp K      &kp H  &kp COMMA     &kp DOT  &kp FSLH  &trans
+                      &kp LEFT_ALT  &to 1  &kp SPACE    &kp ENTER  &to 2  &kp LEFT_WIN
             >;
         };
 
@@ -32,9 +32,9 @@
 
         layer_2 {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans    &trans         &trans       &trans     &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans    &trans         &trans       &trans     &trans         &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp BACKSPACE  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE     &trans
                          &trans   &trans   &trans    &trans    &trans         &trans
             >;
         };
@@ -53,8 +53,8 @@
         compatible = "zmk,conditional-layers";
 
         Config {
-            if-layers = <1 1>;
-            then-layer = <1>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
